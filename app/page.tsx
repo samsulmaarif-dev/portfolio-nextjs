@@ -12,6 +12,7 @@ export default function Home() {
           <button className="px-6 py-3 bg-blue-600 rounded-lg hover:scale-105 transition">
             View Projects
           </button>
+          y
           <button className="px-6 py-3 border border-gray-600 rounded-lg hover:bg-gray-800 transition">
             Contact Me
           </button>
