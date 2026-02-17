@@ -1,3 +1,4 @@
+"use client";
 export default function Home() {
   return (
     <main className="bg-black text-white scroll-smooth">
@@ -43,7 +44,7 @@ export default function Home() {
           <div className="bg-gray-900 p-6 rounded-2xl border border-gray-800 hover:scale-105 transition">
             <h3 className="text-xl font-semibold mb-4">Project One</h3>
             <p className="text-gray-400 text-sm">
-              Modern web application built with Next.js and Tailwind CSS.
+              Modern web application built with Next.js and Tailwind CSS.l
             </p>
           </div>
 
