@@ -40,7 +40,7 @@ export default function Home() {
           transition={{ duration: 0.6 }}
           className="text-5xl md:text-6xl font-bold mb-6"
         >
-          Hi, I'm <span className="text-blue-500">Samsul</span>
+          Hi, I&apos;m <span className="text-blue-500">Samsul</span>
         </motion.h1>
 
         <motion.p
@@ -145,7 +145,7 @@ export default function Home() {
 
       {/* CONTACT */}
       <section id="contact" className="py-24 px-6 text-center bg-gray-950">
-        <h2 className="text-3xl font-bold mb-6">Let's Work Together</h2>
+        <h2 className="text-3xl font-bold mb-6">Let&apos;s Work Together</h2>
         <p className="text-gray-400 mb-8">
           Interested in collaborating or building something impactful?
         </p>
