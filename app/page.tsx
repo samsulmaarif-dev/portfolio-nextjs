@@ -63,6 +63,24 @@ export default function Home() {
           className="px-8 py-3 bg-blue-600 rounded-lg hover:scale-105 transition duration-300"
         >
           View My Work
+          <div className="flex gap-4 justify-center">
+            {/* View Work */}
+            <a
+              href="#projects"
+              className="px-8 py-3 bg-blue-600 rounded-lg hover:scale-105 transition duration-300"
+            >
+              View My Work
+            </a>
+
+            {/* Download CV */}
+            <a
+              href="/Samsul_Maarif_CV.pdf"
+              download
+              className="px-8 py-3 border border-blue-500 rounded-lg hover:bg-blue-500/10 transition duration-300"
+            >
+              Download CV
+            </a>
+          </div>
         </motion.a>
       </section>
 
