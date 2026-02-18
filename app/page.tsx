@@ -9,7 +9,9 @@ const fadeUp = {
 
 export default function Home() {
   return (
-    <main className="bg-black text-white scroll-smooth">
+    <main className="relative bg-black text-white overflow-hidden scroll-smooth">
+      {/* Gradient Glow Background */}
+      <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-blue-600/20 blur-[200px] rounded-full"></div>
       {/* NAVBAR */}
       <nav className="fixed top-0 w-full bg-black/70 backdrop-blur-md border-b border-gray-800 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between">
@@ -42,7 +44,22 @@ export default function Home() {
         >
           Hi, I&apos;m <span className="text-blue-500">Samsul</span>
         </motion.h1>
-
+        <div className="flex gap-6 justify-center mt-6 text-gray-400">
+          <a
+            href="https://github.com/samsulmaarif-dev"
+            target="_blank"
+            className="hover:text-blue-500 transition"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/samsul-maarif-8713b83ab"
+            target="_blank"
+            className="hover:text-blue-500 transition"
+          >
+            LinkedIn
+          </a>
+        </div>
         <motion.p
           initial="hidden"
           animate="show"
@@ -83,7 +100,23 @@ export default function Home() {
           </div>
         </motion.a>
       </section>
-
+      {/* STATS */}
+      <section className="py-16 text-center">
+        <div className="grid grid-cols-3 max-w-4xl mx-auto text-center">
+          <div>
+            <h3 className="text-3xl font-bold text-blue-500">3+</h3>
+            <p className="text-gray-400">Projects</p>
+          </div>
+          <div>
+            <h3 className="text-3xl font-bold text-blue-500">2+</h3>
+            <p className="text-gray-400">Years Experience</p>
+          </div>
+          <div>
+            <h3 className="text-3xl font-bold text-blue-500">8+</h3>
+            <p className="text-gray-400">Technologies</p>
+          </div>
+        </div>
+      </section>
       {/* ABOUT */}
       <motion.section
         id="about"
@@ -160,7 +193,30 @@ export default function Home() {
           </div>
         </div>
       </motion.section>
+      {/* SKILLS */}
+      <section className="py-24 px-6 max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold mb-12 text-center">Skills</h2>
 
+        {[
+          { name: "React", level: "90%" },
+          { name: "Next.js", level: "85%" },
+          { name: "TypeScript", level: "80%" },
+          { name: "Node.js", level: "75%" },
+        ].map((skill, i) => (
+          <div key={i} className="mb-6">
+            <div className="flex justify-between mb-2">
+              <span>{skill.name}</span>
+              <span className="text-gray-400">{skill.level}</span>
+            </div>
+            <div className="w-full bg-gray-800 h-2 rounded-full">
+              <div
+                className="bg-blue-500 h-2 rounded-full transition-all duration-700"
+                style={{ width: skill.level }}
+              ></div>
+            </div>
+          </div>
+        ))}
+      </section>
       {/* CONTACT */}
       <section id="contact" className="py-24 px-6 text-center bg-gray-950">
         <h2 className="text-3xl font-bold mb-6">Let&apos;s Work Together</h2>
