@@ -79,13 +79,14 @@ export default function Home() {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="px-8 py-3 bg-blue-600 rounded-lg hover:scale-105 transition duration-300"
         >
-          View My Work
           <div className="flex gap-4 justify-center">
             {/* View Work */}
             <a
               href="#projects"
               className="px-8 py-3 bg-blue-600 rounded-lg hover:scale-105 transition duration-300"
-            ></a>
+            >
+              View My Work
+            </a>
 
             {/* Download CV */}
             <a
