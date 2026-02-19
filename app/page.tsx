@@ -85,9 +85,7 @@ export default function Home() {
             <a
               href="#projects"
               className="px-8 py-3 bg-blue-600 rounded-lg hover:scale-105 transition duration-300"
-            >
-              View My Work
-            </a>
+            ></a>
 
             {/* Download CV */}
             <a
@@ -230,6 +228,107 @@ export default function Home() {
           Contact Me
         </a>
       </section>
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+          {/* Contact Info */}
+          <div>
+            <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
+
+            <div className="space-y-4 text-gray-600">
+              <p>
+                <strong>Location:</strong> Indonesia
+              </p>
+              <p>
+                <strong>Email:</strong> samsulmaarif55063@gmail.com
+              </p>
+              <p>
+                <strong>Phone:</strong> 081385058714
+              </p>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="space-y-4">
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="w-full p-3 border rounded-lg"
+            />
+            <input
+              type="email"
+              placeholder="your@email.com"
+              className="w-full p-3 border rounded-lg"
+            />
+            <input
+              type="text"
+              placeholder="General Inquiry"
+              className="w-full p-3 border rounded-lg"
+            />
+            <textarea
+              placeholder="Your message..."
+              rows={4}
+              className="w-full p-3 border rounded-lg"
+            ></textarea>
+
+            <button className="w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition">
+              Send Message
+            </button>
+          </div>
+        </div>
+      </section>
+      <footer className="mt-32 bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white pt-20 pb-10 rounded-t-3xl">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          {/* Logo / Brand */}
+          <div className="mb-6">
+            <h1 className="text-2xl font-bold tracking-widest text-orange-500">
+              SAMUEL<span className="text-white">DEV</span>
+            </h1>
+          </div>
+
+          {/* Name */}
+          <h2 className="text-3xl md:text-4xl font-bold mb-2">Samsul Maarif</h2>
+
+          <p className="text-gray-400 mb-8">Fullstack Developer</p>
+
+          {/* Social Icons */}
+          <div className="flex justify-center gap-6 mb-10">
+            <a
+              href="https://github.com/samsulmaarif-dev"
+              target="_blank"
+              className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-500 transition duration-300"
+            >
+              <FaGithub />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/samsul-maarif-8713b83ab"
+              target="_blank"
+              className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-500 transition duration-300"
+            >
+              <FaLinkedin />
+            </a>
+
+            <a
+              href="https://instagram.com/"
+              target="_blank"
+              className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-500 transition duration-300"
+            >
+              <FaInstagram />
+            </a>
+          </div>
+
+          {/* Divider */}
+          <div className="border-t border-gray-700 pt-6">
+            <p className="text-gray-500 text-sm">
+              © {new Date().getFullYear()} Samsul Maarif. All rights reserved.
+            </p>
+
+            <p className="text-gray-600 text-xs mt-2">
+              Crafted with passion and clean code ✨
+            </p>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
