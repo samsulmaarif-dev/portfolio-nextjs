@@ -1,12 +1,10 @@
 "use client";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
-
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   show: { opacity: 1, y: 0 },
 };
-
 export default function Home() {
   return (
     <main className="relative bg-black text-white overflow-hidden scroll-smooth">
