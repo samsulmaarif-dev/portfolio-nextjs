@@ -32,7 +32,12 @@ export default function Home() {
           </div>
         </div>
       </nav>
+      <main className="relative bg-black text-white overflow-hidden scroll-smooth">
 
+  {/* Soft Animated Glow */}
+  <div className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
+    <div className="absolute w-[600px] h-[600px] bg-orange-500/20 blur-[200px] rounded-full animate-pulse"></div>
+  </div>
       {/* HERO */}
       <section className="flex flex-col items-center justify-center h-screen text-center px-6 pt-24">
         <motion.h1
@@ -42,7 +47,7 @@ export default function Home() {
           transition={{ duration: 0.6 }}
           className="text-5xl md:text-6xl font-bold mb-6"
         >
-          Hi, I&apos;m <span className="text-blue-500">Samsul</span>
+          Hi, I&apos;m <span className="text-blue-500">Samsul Maarif</span>
         </motion.h1>
         <div className="flex gap-6 justify-center mt-6 text-gray-400">
           <a
@@ -119,7 +124,13 @@ export default function Home() {
       {/* ABOUT */}
       <motion.section
         id="about"
-        className="py-24 px-6 max-w-6xl mx-auto"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+  className="py-24">
+</motion.section>
+<motion.section
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
@@ -270,10 +281,12 @@ export default function Home() {
               rows={4}
               className="w-full p-3 border rounded-lg"
             ></textarea>
-
-            <button className="w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition">
-              Send Message
-            </button>
+            <button
+  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+  className="fixed bottom-24 right-6 bg-gray-800 w-12 h-12 rounded-full text-white hover:bg-orange-500 transition"
+>
+  ↑
+</button>
           </div>
         </div>
       </section>
