@@ -1,5 +1,5 @@
 "use client";
-
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const fadeUp = {
