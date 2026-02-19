@@ -243,7 +243,7 @@ export default function Home() {
                 <strong>Email:</strong> samsulmaarif55063@gmail.com
               </p>
               <p>
-                <strong>Phone:</strong> 081385058714
+                <strong>Phone:</strong> +6281385058714
               </p>
             </div>
           </div>
