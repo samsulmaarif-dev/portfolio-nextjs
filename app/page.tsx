@@ -10,32 +10,31 @@ export default function Home() {
     <main className="relative bg-black text-white overflow-hidden scroll-smooth">
       {/* Gradient Glow Background */}
       <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-blue-600/20 blur-[200px] rounded-full"></div>
-      {/* NAVBAR */}
-      <nav className="fixed top-0 w-full bg-black/70 backdrop-blur-md border-b border-gray-800 z-50">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between">
-          <h1 className="font-bold text-lg">Samsul</h1>
-          <div className="space-x-6 text-sm">
-            <a href="#about" className="hover:text-blue-500">
-              About
-            </a>
-            <a href="#projects" className="hover:text-blue-500">
-              Projects
-            </a>
-            <a href="#experience" className="hover:text-blue-500">
-              Experience
-            </a>
-            <a href="#contact" className="hover:text-blue-500">
-              Contact
-            </a>
-          </div>
-        </div>
-      </nav>
-      <main className="relative bg-black text-white overflow-hidden scroll-smooth">
 
-  {/* Soft Animated Glow */}
-  <div className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
-    <div className="absolute w-[600px] h-[600px] bg-orange-500/20 blur-[200px] rounded-full animate-pulse"></div>
-  </div>
+      {/* NAVBAR */}
+      <nav className="fixed top-0 w-full bg-black/70 backdrop-blur-md border-b border-gray-800 z-50"></nav>
+      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between"></div>
+      <h1 className="font-bold text-lg">Samsul</h1>
+      <div className="space-x-6 text-sm">
+        <a href="#about" className="hover:text-blue-500">
+          About
+        </a>
+        <a href="#projects" className="hover:text-blue-500">
+          Projects
+        </a>
+        <a href="#experience" className="hover:text-blue-500">
+          Experience
+        </a>
+        <a href="#contact" className="hover:text-blue-500">
+          Contact
+        </a>
+      </div>
+      <main className="relative bg-black text-white overflow-hidden scroll-smooth"></main>
+
+      {/* Soft Animated Glow */}
+      <div className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
+        <div className="absolute w-[600px] h-[600px] bg-orange-500/20 blur-[200px] rounded-full animate-pulse"></div>
+      </div>
       {/* HERO */}
       <section className="flex flex-col items-center justify-center h-screen text-center px-6 pt-24">
         <motion.h1
@@ -122,13 +121,13 @@ export default function Home() {
       {/* ABOUT */}
       <motion.section
         id="about"
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  viewport={{ once: true }}
-  className="py-24">
-</motion.section>
-<motion.section
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="py-24"
+      ></motion.section>
+      <motion.section
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
@@ -280,11 +279,11 @@ export default function Home() {
               className="w-full p-3 border rounded-lg"
             ></textarea>
             <button
-  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-  className="fixed bottom-24 right-6 bg-gray-800 w-12 h-12 rounded-full text-white hover:bg-orange-500 transition"
->
-  ↑
-</button>
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="fixed bottom-24 right-6 bg-gray-800 w-12 h-12 rounded-full text-white hover:bg-orange-500 transition"
+            >
+              ↑
+            </button>
           </div>
         </div>
       </section>
