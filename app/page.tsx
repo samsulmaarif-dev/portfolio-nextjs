@@ -44,7 +44,7 @@ export default function Home() {
 
       {/* HERO */}
       <section className="flex flex-col md:flex-row items-center justify-center min-h-screen px-6 gap-12">
-        {/* TEXT */}
+        {/* TEXT - kiri */}
         <div className="text-center md:text-left">
           <motion.h1
             initial="hidden"
@@ -55,9 +55,56 @@ export default function Home() {
           >
             Hi, I&apos;m <span className="text-blue-500">Samsul Maarif</span>
           </motion.h1>
+
+          {/* GitHub & LinkedIn */}
+          <div className="flex gap-6 justify-center md:justify-start mt-4 mb-4 text-gray-400">
+            <a
+              href="https://github.com/samsulmaarif-dev"
+              target="_blank"
+              className="hover:text-blue-500 transition"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/samsul-maarif-8713b83ab"
+              target="_blank"
+              className="hover:text-blue-500 transition"
+            >
+              LinkedIn
+            </a>
+          </div>
+
+          {/* Deskripsi */}
+          <motion.p
+            initial="hidden"
+            animate="show"
+            variants={fadeUp}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="max-w-xl text-gray-400 mb-8"
+          >
+            Fullstack Developer building scalable, high-performance digital
+            products.
+          </motion.p>
+
+          {/* Tombol */}
+          <div className="flex gap-4 justify-center md:justify-start">
+            <a
+              href="#projects"
+              className="px-8 py-3 bg-blue-600 rounded-lg hover:scale-105 transition duration-300"
+            >
+              View My Work
+            </a>
+            <a
+              href="/Samsul_Maarif_CV.pdf"
+              download
+              className="px-8 py-3 border border-blue-500 rounded-lg hover:bg-blue-500/10 transition duration-300"
+            >
+              Download CV
+            </a>
+          </div>
         </div>
 
-        {/* IMAGE */}
+        {/* IMAGE - kanan */}
         <motion.img
           src="/DCAAF3CE-F8EB-4C78-9508-79E45BDF91D2.jpeg"
           alt="profile"
@@ -67,50 +114,6 @@ export default function Home() {
           className="w-64 h-64 object-cover rounded-2xl shadow-xl"
         />
       </section>
-      <div className="flex gap-6 justify-center mt-6 text-gray-400">
-        <a
-          href="https://github.com/samsulmaarif-dev"
-          target="_blank"
-          className="hover:text-blue-500 transition"
-        >
-          GitHub
-        </a>
-        <a
-          href="https://www.linkedin.com/in/samsul-maarif-8713b83ab"
-          target="_blank"
-          className="hover:text-blue-500 transition"
-        >
-          LinkedIn
-        </a>
-      </div>
-      <motion.p
-        initial="hidden"
-        animate="show"
-        variants={fadeUp}
-        transition={{ delay: 0.2, duration: 0.6 }}
-        className="max-w-xl text-gray-400 mb-8"
-      >
-        Fullstack Developer building scalable, high-performance digital
-        products.
-      </motion.p>
-      <div className="flex gap-4 justify-center md:justify-start">
-        {/* View Work */}
-        <a
-          href="#projects"
-          className="px-8 py-3 bg-blue-600 rounded-lg hover:scale-105 transition duration-300"
-        >
-          View My Work
-        </a>
-
-        {/* Download CV */}
-        <a
-          href="/Samsul_Maarif_CV.pdf"
-          download
-          className="px-8 py-3 border border-blue-500 rounded-lg hover:bg-blue-500/10 transition duration-300"
-        >
-          Download CV
-        </a>
-      </div>
 
       {/* STATS */}
       <section className="py-16 text-center">
