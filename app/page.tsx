@@ -8,6 +8,7 @@ import {
   FaPhone,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Image from "next/image";
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   show: { opacity: 1, y: 0 },
@@ -36,23 +37,37 @@ export default function Home() {
           Contact
         </a>
       </div>
-      <main className="relative bg-black text-white overflow-hidden scroll-smooth"></main>
+      <main className="relative bg-black text-white overflow-hidden scroll-smooth">
+        {/* Soft Animated Glow */}
+        <div className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
+          <div className="absolute w-[600px] h-[600px] bg-orange-500/20 blur-[200px] rounded-full animate-pulse"></div>
+        </div>
 
-      {/* Soft Animated Glow */}
-      <div className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
-        <div className="absolute w-[600px] h-[600px] bg-orange-500/20 blur-[200px] rounded-full animate-pulse"></div>
-      </div>
-      {/* HERO */}
-      <section className="flex flex-col items-center justify-center h-screen text-center px-6 pt-24">
-        <motion.h1
-          initial="hidden"
-          animate="show"
-          variants={fadeUp}
-          transition={{ duration: 0.6 }}
-          className="text-5xl md:text-6xl font-bold mb-6"
-        >
-          Hi, I&apos;m <span className="text-blue-500">Samsul Maarif</span>
-        </motion.h1>
+        {/* HERO */}
+        <section className="flex flex-col md:flex-row items-center justify-center min-h-screen px-6 gap-12">
+          {/* TEXT */}
+          <div className="text-center md:text-left">
+            <motion.h1
+              initial="hidden"
+              animate="show"
+              variants={fadeUp}
+              transition={{ duration: 0.6 }}
+              className="text-5xl md:text-6xl font-bold mb-6"
+            >
+              Hi, I&apos;m <span className="text-blue-500">Samsul Maarif</span>
+            </motion.h1>
+          </div>
+
+          {/* IMAGE */}
+          <motion.img
+            src="/DCAAF3CE-F8EB-4C78-9508-79E45BDF91D2.jpeg"
+            alt="profile"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="w-64 h-64 object-cover rounded-2xl shadow-xl"
+          />
+        </section>
         <div className="flex gap-6 justify-center mt-6 text-gray-400">
           <a
             href="https://github.com/samsulmaarif-dev"
@@ -107,7 +122,7 @@ export default function Home() {
             </a>
           </div>
         </motion.a>
-      </section>
+      </main>
       {/* STATS */}
       <section className="py-16 text-center">
         <div className="grid grid-cols-3 max-w-4xl mx-auto text-center">
