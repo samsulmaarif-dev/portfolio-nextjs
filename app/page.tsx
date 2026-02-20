@@ -93,34 +93,25 @@ export default function Home() {
         Fullstack Developer building scalable, high-performance digital
         products.
       </motion.p>
+      <div className="flex gap-4 justify-center md:justify-start">
+        {/* View Work */}
+        <a
+          href="#projects"
+          className="px-8 py-3 bg-blue-600 rounded-lg hover:scale-105 transition duration-300"
+        >
+          View My Work
+        </a>
 
-      <motion.a
-        href="#projects"
-        initial="hidden"
-        animate="show"
-        variants={fadeUp}
-        transition={{ delay: 0.4, duration: 0.6 }}
-        className="px-8 py-3 bg-blue-600 rounded-lg hover:scale-105 transition duration-300"
-      >
-        <div className="flex gap-4 justify-center">
-          {/* View Work */}
-          <a
-            href="#projects"
-            className="px-8 py-3 bg-blue-600 rounded-lg hover:scale-105 transition duration-300"
-          >
-            View My Work
-          </a>
+        {/* Download CV */}
+        <a
+          href="/Samsul_Maarif_CV.pdf"
+          download
+          className="px-8 py-3 border border-blue-500 rounded-lg hover:bg-blue-500/10 transition duration-300"
+        >
+          Download CV
+        </a>
+      </div>
 
-          {/* Download CV */}
-          <a
-            href="/Samsul_Maarif_CV.pdf"
-            download
-            className="px-8 py-3 border border-blue-500 rounded-lg hover:bg-blue-500/10 transition duration-300"
-          >
-            Download CV
-          </a>
-        </div>
-      </motion.a>
       {/* STATS */}
       <section className="py-16 text-center">
         <div className="grid grid-cols-3 max-w-4xl mx-auto text-center">
