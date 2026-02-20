@@ -1,5 +1,12 @@
 "use client";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaPhone,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -225,65 +232,75 @@ export default function Home() {
         ))}
       </section>
       {/* CONTACT */}
-      <section id="contact" className="py-24 px-6 text-center bg-gray-950">
-        <h2 className="text-3xl font-bold mb-6">Let&apos;s Work Together</h2>
-        <p className="text-gray-400 mb-8">
-          Interested in collaborating or building something impactful?
-        </p>
-        <a
-          href="mailto:youremail@email.com"
-          className="px-8 py-3 bg-blue-600 rounded-lg hover:scale-105 transition duration-300"
-        >
-          Contact Me
-        </a>
-      </section>
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-          {/* Contact Info */}
+      <section id="contact" className="py-20 px-6 bg-black text-white">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+          {/* LEFT SIDE - CONTACT INFO */}
           <div>
-            <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
+            <h2 className="text-3xl font-bold mb-8">Contact Information</h2>
 
-            <div className="space-y-4 text-gray-600">
-              <p>
-                <strong>Location:</strong> Indonesia
-              </p>
-              <p>
-                <strong>Email:</strong> samsulmaarif55063@gmail.com
-              </p>
-              <p>
-                <strong>Phone:</strong> +6281385058714
-              </p>
+            <div className="space-y-6 text-gray-300">
+              <div className="flex items-center gap-4">
+                <FaMapMarkerAlt className="text-blue-500 text-xl" />
+                <div>
+                  <p className="font-semibold text-white">Location</p>
+                  <p>Indonesia</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <FaEnvelope className="text-blue-500 text-xl" />
+                <div>
+                  <p className="font-semibold text-white">Email</p>
+                  <p>samsulmaarif55063@gmail.com</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <FaPhone className="text-blue-500 text-xl" />
+                <div>
+                  <p className="font-semibold text-white">Phone</p>
+                  <p>+6281385058714</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="space-y-4">
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full p-3 border rounded-lg"
-            />
-            <input
-              type="email"
-              placeholder="your@email.com"
-              className="w-full p-3 border rounded-lg"
-            />
-            <input
-              type="text"
-              placeholder="General Inquiry"
-              className="w-full p-3 border rounded-lg"
-            />
-            <textarea
-              placeholder="Your message..."
-              rows={4}
-              className="w-full p-3 border rounded-lg"
-            ></textarea>
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="fixed bottom-24 right-6 bg-gray-800 w-12 h-12 rounded-full text-white hover:bg-orange-500 transition"
-            >
-              ↑
-            </button>
+          {/* RIGHT SIDE - CONTACT FORM */}
+          <div>
+            <h2 className="text-3xl font-bold mb-8">Send Message</h2>
+
+            <form className="space-y-4">
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="w-full p-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500"
+              />
+
+              <input
+                type="email"
+                placeholder="your@email.com"
+                className="w-full p-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500"
+              />
+
+              <input
+                type="text"
+                placeholder="Subject"
+                className="w-full p-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500"
+              />
+
+              <textarea
+                rows={4}
+                placeholder="Your message..."
+                className="w-full p-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500"
+              ></textarea>
+
+              <button
+                type="submit"
+                className="w-full bg-blue-600 hover:bg-blue-700 transition-all py-3 rounded-lg font-semibold"
+              >
+                Send Message
+              </button>
+            </form>
           </div>
         </div>
       </section>
