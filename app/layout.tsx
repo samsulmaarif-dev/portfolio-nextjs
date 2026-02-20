@@ -19,6 +19,12 @@ export const metadata = {
   icons: {
     icon: "/DCAAF3CE-F8EB-4C78-9508-79E45BDF91D2.jpeg",
   },
+  openGraph: {
+    title: "Portfolio - Full Stack Developer",
+    description:
+      "Professional portfolio showcasing web development projects and skills",
+    images: [],
+  },
 };
 export default function RootLayout({
   children,
