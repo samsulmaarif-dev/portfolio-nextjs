@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Samsul Maarif — Fullstack Developer Portfolio",
+  title: "Portfolio - Full Stack Developer",
   description:
     "Portfolio of Samsul Maarif, Fullstack Developer specializing in scalable web applications, modern UI systems, and performance optimization.",
 };
