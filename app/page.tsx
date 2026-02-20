@@ -37,92 +37,90 @@ export default function Home() {
           Contact
         </a>
       </div>
-      <main className="relative bg-black text-white overflow-hidden scroll-smooth">
-        {/* Soft Animated Glow */}
-        <div className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
-          <div className="absolute w-[600px] h-[600px] bg-orange-500/20 blur-[200px] rounded-full animate-pulse"></div>
+      {/* Soft Animated Glow */}
+      <div className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
+        <div className="absolute w-[600px] h-[600px] bg-orange-500/20 blur-[200px] rounded-full animate-pulse"></div>
+      </div>
+
+      {/* HERO */}
+      <section className="flex flex-col md:flex-row items-center justify-center min-h-screen px-6 gap-12">
+        {/* TEXT */}
+        <div className="text-center md:text-left">
+          <motion.h1
+            initial="hidden"
+            animate="show"
+            variants={fadeUp}
+            transition={{ duration: 0.6 }}
+            className="text-5xl md:text-6xl font-bold mb-6"
+          >
+            Hi, I&apos;m <span className="text-blue-500">Samsul Maarif</span>
+          </motion.h1>
         </div>
 
-        {/* HERO */}
-        <section className="flex flex-col md:flex-row items-center justify-center min-h-screen px-6 gap-12">
-          {/* TEXT */}
-          <div className="text-center md:text-left">
-            <motion.h1
-              initial="hidden"
-              animate="show"
-              variants={fadeUp}
-              transition={{ duration: 0.6 }}
-              className="text-5xl md:text-6xl font-bold mb-6"
-            >
-              Hi, I&apos;m <span className="text-blue-500">Samsul Maarif</span>
-            </motion.h1>
-          </div>
+        {/* IMAGE */}
+        <motion.img
+          src="/DCAAF3CE-F8EB-4C78-9508-79E45BDF91D2.jpeg"
+          alt="profile"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="w-64 h-64 object-cover rounded-2xl shadow-xl"
+        />
+      </section>
+      <div className="flex gap-6 justify-center mt-6 text-gray-400">
+        <a
+          href="https://github.com/samsulmaarif-dev"
+          target="_blank"
+          className="hover:text-blue-500 transition"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://www.linkedin.com/in/samsul-maarif-8713b83ab"
+          target="_blank"
+          className="hover:text-blue-500 transition"
+        >
+          LinkedIn
+        </a>
+      </div>
+      <motion.p
+        initial="hidden"
+        animate="show"
+        variants={fadeUp}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        className="max-w-xl text-gray-400 mb-8"
+      >
+        Fullstack Developer building scalable, high-performance digital
+        products.
+      </motion.p>
 
-          {/* IMAGE */}
-          <motion.img
-            src="/DCAAF3CE-F8EB-4C78-9508-79E45BDF91D2.jpeg"
-            alt="profile"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="w-64 h-64 object-cover rounded-2xl shadow-xl"
-          />
-        </section>
-        <div className="flex gap-6 justify-center mt-6 text-gray-400">
+      <motion.a
+        href="#projects"
+        initial="hidden"
+        animate="show"
+        variants={fadeUp}
+        transition={{ delay: 0.4, duration: 0.6 }}
+        className="px-8 py-3 bg-blue-600 rounded-lg hover:scale-105 transition duration-300"
+      >
+        <div className="flex gap-4 justify-center">
+          {/* View Work */}
           <a
-            href="https://github.com/samsulmaarif-dev"
-            target="_blank"
-            className="hover:text-blue-500 transition"
+            href="#projects"
+            className="px-8 py-3 bg-blue-600 rounded-lg hover:scale-105 transition duration-300"
           >
-            GitHub
+            View My Work
           </a>
+
+          {/* Download CV */}
           <a
-            href="https://www.linkedin.com/in/samsul-maarif-8713b83ab"
-            target="_blank"
-            className="hover:text-blue-500 transition"
+            href="/Samsul_Maarif_CV.pdf"
+            download
+            className="px-8 py-3 border border-blue-500 rounded-lg hover:bg-blue-500/10 transition duration-300"
           >
-            LinkedIn
+            Download CV
           </a>
         </div>
-        <motion.p
-          initial="hidden"
-          animate="show"
-          variants={fadeUp}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          className="max-w-xl text-gray-400 mb-8"
-        >
-          Fullstack Developer building scalable, high-performance digital
-          products.
-        </motion.p>
-
-        <motion.a
-          href="#projects"
-          initial="hidden"
-          animate="show"
-          variants={fadeUp}
-          transition={{ delay: 0.4, duration: 0.6 }}
-          className="px-8 py-3 bg-blue-600 rounded-lg hover:scale-105 transition duration-300"
-        >
-          <div className="flex gap-4 justify-center">
-            {/* View Work */}
-            <a
-              href="#projects"
-              className="px-8 py-3 bg-blue-600 rounded-lg hover:scale-105 transition duration-300"
-            >
-              View My Work
-            </a>
-
-            {/* Download CV */}
-            <a
-              href="/Samsul_Maarif_CV.pdf"
-              download
-              className="px-8 py-3 border border-blue-500 rounded-lg hover:bg-blue-500/10 transition duration-300"
-            >
-              Download CV
-            </a>
-          </div>
-        </motion.a>
-      </main>
+      </motion.a>
       {/* STATS */}
       <section className="py-16 text-center">
         <div className="grid grid-cols-3 max-w-4xl mx-auto text-center">
