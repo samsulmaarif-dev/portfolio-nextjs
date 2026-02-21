@@ -188,13 +188,18 @@ export default function Home() {
       <section id="projects" className="py-24 bg-gray-950 px-6">
         <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto perspective-[1000px]">
           {["Crypto Dashboard", "E-Commerce Platform", "Portfolio Website"].map(
             (title, i) => (
               <motion.div
                 key={i}
                 initial="hidden"
                 whileInView="show"
+                whileHover={{
+                  rotateX: 5,
+                  rotateY: -5,
+                  scale: 1.05,
+                }}
                 viewport={{ once: true }}
                 variants={fadeUp}
                 transition={{ duration: 0.6, delay: i * 0.2 }}
