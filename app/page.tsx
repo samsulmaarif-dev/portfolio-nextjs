@@ -20,10 +20,10 @@ export default function Home() {
       <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-blue-600/20 blur-[200px] rounded-full"></div>
 
       {/* NAVBAR */}
-      <nav className="fixed top-0 w-full bg-black/70 backdrop-blur-md border-b border-gray-800 z-50"></nav>
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between"></div>
-      <h1 className="font-bold text-lg">Samsul</h1>
-      <div className="space-x-6 text-sm">
+      <nav className="fixed top-0 w-full bg-black/70 backdrop-blur-md border-b border-gray-800 z-50">
+  <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 className="font-bold text-lg">Samsul</h1>
+    <div className="space-x-6 text-sm">
         <a href="#about" className="hover:text-blue-500">
           About
         </a>
@@ -36,7 +36,9 @@ export default function Home() {
         <a href="#contact" className="hover:text-blue-500">
           Contact
         </a>
+        </div>
       </div>
+      </nav>
       {/* Soft Animated Glow */}
       <div className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
         <div className="absolute w-[600px] h-[600px] bg-orange-500/20 blur-[200px] rounded-full animate-pulse"></div>
