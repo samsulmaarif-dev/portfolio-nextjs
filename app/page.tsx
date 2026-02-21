@@ -13,34 +13,60 @@ const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   show: { opacity: 1, y: 0 },
 };
+import { useState, useEffect } from "react";
 export default function Home() {
+  const roles = [
+    "Fullstack Developer",
+    "Frontend Engineer",
+    "Backend Developer",
+  ];
+  const [text, setText] = useState("");
+  const [index, setIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+
+  useEffect(() => {
+    if (charIndex < roles[index].length) {
+      const timeout = setTimeout(() => {
+        setText((prev) => prev + roles[index][charIndex]);
+        setCharIndex(charIndex + 1);
+      }, 100);
+      return () => clearTimeout(timeout);
+    } else {
+      setTimeout(() => {
+        setText("");
+        setCharIndex(0);
+        setIndex((prev) => (prev + 1) % roles.length);
+      }, 1500);
+    }
+  }, [charIndex, index]);
+
   return (
     <main className="relative bg-black text-white overflow-hidden scroll-smooth">
       {/* Gradient Glow Background */}
       <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-blue-600/20 blur-[200px] rounded-full"></div>
 
       {/* NAVBAR */}
-      <nav className="fixed top-0 w-full bg-black/70 backdrop-blur-md border-b border-gray-800 z-50">
-  <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 className="font-bold text-lg">Samsul</h1>
-    <div className="space-x-6 text-sm">
-        <a href="#about" className="hover:text-blue-500">
-          About
-        </a>
-        <a href="#projects" className="hover:text-blue-500">
-          Projects
-        </a>
-        <a href="#experience" className="hover:text-blue-500">
-          Experience
-        </a>
-        <a href="#contact" className="hover:text-blue-500">
-          Contact
-        </a>
+      <nav className="fixed top-0 w-full bg-black/40 backdrop-blur-lg border-b border-white/10 shadow-lg shadow-black/30 z-50">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+          <h1 className="font-bold text-lg">Samsul</h1>
+          <div className="space-x-6 text-sm">
+            <a href="#about" className="hover:text-blue-500">
+              About
+            </a>
+            <a href="#projects" className="hover:text-blue-500">
+              Projects
+            </a>
+            <a href="#experience" className="hover:text-blue-500">
+              Experience
+            </a>
+            <a href="#contact" className="hover:text-blue-500">
+              Contact
+            </a>
+          </div>
         </div>
-      </div>
       </nav>
       {/* Soft Animated Glow */}
-      <div className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/20 blur-[200px] rounded-full animate-pulse">
         <div className="absolute w-[600px] h-[600px] bg-orange-500/20 blur-[200px] rounded-full animate-pulse"></div>
       </div>
 
@@ -113,7 +139,7 @@ export default function Home() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-64 h-64 object-cover rounded-2xl shadow-xl"
+          className="w-64 h-64 object-cover rounded-2xl shadow-xl transition duration-500 hover:scale-105"
         />
       </section>
 
