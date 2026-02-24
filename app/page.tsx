@@ -235,13 +235,13 @@ export default function Home() {
                 </ul>
                 <div className="flex gap-3">
                   <a
-                    href="https://nextjs-auth-s....vercel.app"
+                    href="https://portfolio-nextjs-six-black.vercel.app/"
                     className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-semibold transition"
                   >
                     Live Demo
                   </a>
                   <a
-                    href="https://github.com/samsulmaarif"
+                    href="https://github.com/samsulmaarif-dev"
                     className="px-5 py-2 border border-gray-600 hover:border-blue-500 text-white rounded-lg text-sm font-semibold transition"
                   >
                     GitHub
