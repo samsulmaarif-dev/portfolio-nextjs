@@ -187,32 +187,129 @@ export default function Home() {
       {/* PROJECTS */}
       <section id="projects" className="py-24 bg-gray-950 px-6">
         <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
-
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto perspective-[1000px]">
-          {["Crypto Dashboard", "E-Commerce Platform", "Portfolio Website"].map(
-            (title, i) => (
-              <motion.div
-                key={i}
-                initial="hidden"
-                whileInView="show"
-                whileHover={{
-                  rotateX: 5,
-                  rotateY: -5,
-                  scale: 1.05,
-                }}
-                viewport={{ once: true }}
-                variants={fadeUp}
-                transition={{ duration: 0.6, delay: i * 0.2 }}
-                className="bg-gray-900 p-6 rounded-2xl border border-gray-800 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/20 transition duration-300"
-              >
-                <h3 className="text-xl font-semibold mb-4">{title}</h3>
-                <p className="text-gray-400 text-sm">
-                  Modern web application built with scalable architecture and
-                  optimized performance.
+        <div className="max-w-6xl mx-auto">
+          {/* TaskFlow Card */}
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-blue-500 transition-all"
+          >
+            <div className="flex flex-col md:flex-row gap-8">
+              {/* LEFT - Info */}
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-3xl">✅</span>
+                  <h3 className="text-2xl font-bold">
+                    TaskFlow — Fullstack SaaS App
+                  </h3>
+                </div>
+                <p className="text-gray-400 mb-6">
+                  A task management SaaS application built with Next.js,
+                  Tailwind CSS, TypeScript, and PostgreSQL/Supabase.
                 </p>
-              </motion.div>
-            )
-          )}
+                <ul className="space-y-2 mb-6">
+                  {[
+                    { label: "Authentication", desc: "system with JWT" },
+                    {
+                      label: "CRUD",
+                      desc: "operations (Create, Read, Update, Delete)",
+                    },
+                    {
+                      label: "RESTful API",
+                      desc: "built with Next.js API routes",
+                    },
+                    {
+                      label: "PostgreSQL",
+                      desc: "database managed by Supabase",
+                    },
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm">
+                      <span className="text-blue-500 mt-0.5">✓</span>
+                      <span>
+                        <strong>{item.label}</strong> {item.desc}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex gap-3">
+                  <a
+                    href="#"
+                    className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-semibold transition"
+                  >
+                    Live Demo
+                  </a>
+                  <a
+                    href="#"
+                    className="px-5 py-2 border border-gray-600 hover:border-blue-500 text-white rounded-lg text-sm font-semibold transition"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+
+              {/* RIGHT - Mockup */}
+              <div className="flex-1 bg-gray-800 rounded-xl p-4 min-h-[200px] flex items-center justify-center">
+                <div className="w-full bg-white rounded-lg overflow-hidden shadow-xl text-gray-800 text-xs">
+                  <div className="bg-blue-600 text-white px-4 py-2 font-bold flex items-center gap-2">
+                    <span>✅</span> TaskFlow
+                  </div>
+                  <div className="flex">
+                    <div className="bg-gray-100 w-24 p-2 space-y-1 text-gray-600 text-[10px]">
+                      <div className="bg-blue-100 text-blue-700 px-2 py-1 rounded font-semibold">
+                        Dashboard
+                      </div>
+                      <div className="px-2 py-1">Tasks</div>
+                      <div className="px-2 py-1">Logout</div>
+                    </div>
+                    <div className="flex-1 p-3">
+                      <p className="font-bold mb-2">Welcome back, Samsul!</p>
+                      <div className="grid grid-cols-3 gap-1 mb-3">
+                        {[
+                          ["Total Tasks", "8"],
+                          ["In Progress", "3"],
+                          ["Done", "5"],
+                        ].map(([l, v], i) => (
+                          <div key={i} className="bg-gray-50 rounded p-1">
+                            <p className="text-[9px] text-gray-500">{l}</p>
+                            <p className="font-bold text-sm">{v}</p>
+                          </div>
+                        ))}
+                      </div>
+                      <p className="font-semibold mb-1">Tasks</p>
+                      {[
+                        ["Design new user signup flow", "Todo"],
+                        ["Develop API endpoints", "In Progress"],
+                        ["Fix bug in auth", "Todo"],
+                        ["Set up CI/CD", "Done"],
+                      ].map(([task, status], i) => (
+                        <div
+                          key={i}
+                          className="flex justify-between py-0.5 border-b border-gray-100"
+                        >
+                          <span className="text-[10px] truncate flex-1">
+                            {task}
+                          </span>
+                          <span
+                            className={`text-[9px] px-1 rounded ml-1 ${
+                              status === "Done"
+                                ? "bg-green-100 text-green-700"
+                                : status === "In Progress"
+                                ? "bg-yellow-100 text-yellow-700"
+                                : "bg-gray-100 text-gray-500"
+                            }`}
+                          >
+                            {status}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
