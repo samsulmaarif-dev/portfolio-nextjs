@@ -233,6 +233,38 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+                {/* Tech Badges */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {[
+                    "Next.js",
+                    "TypeScript",
+                    "Supabase",
+                    "Tailwind CSS",
+                    "PostgreSQL",
+                  ].map((tech, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 bg-blue-500/10 border border-blue-500/30 text-blue-400 rounded-full text-xs font-semibold"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-6 mb-6">
+                  <div className="text-center">
+                    <p className="text-xl font-bold text-white">5+</p>
+                    <p className="text-xs text-gray-400">Features</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-xl font-bold text-white">100%</p>
+                    <p className="text-xs text-gray-400">Responsive</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-xl font-bold text-white">Full</p>
+                    <p className="text-xs text-gray-400">Stack</p>
+                  </div>
+                </div>
+
                 <div className="flex gap-3">
                   <a
                     href="https://portfolio-nextjs-six-black.vercel.app/"
@@ -310,151 +342,6 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
-          {/* Crypto Dashboard Card */}
-<motion.div
-  initial="hidden"
-  whileInView="show"
-  viewport={{ once: true }}
-  variants={fadeUp}
-  transition={{ duration: 0.6, delay: 0.2 }}
-  className="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-blue-500 transition-all mt-6"
->
-  <div className="flex flex-col md:flex-row gap-8">
-    <div className="flex-1">
-      <div className="flex items-center gap-3 mb-4">
-        <span className="text-3xl">📊</span>
-        <h3 className="text-2xl font-bold">Crypto Dashboard</h3>
-      </div>
-      <p className="text-gray-400 mb-6">
-        Real-time cryptocurrency tracking dashboard built with Next.js, Chart.js, and CoinGecko API.
-      </p>
-      <ul className="space-y-2 mb-6">
-        {[
-          { label: "Real-time", desc: "price tracking with WebSocket" },
-          { label: "Charts", desc: "interactive candlestick & line charts" },
-          { label: "Portfolio", desc: "tracker with profit/loss calculator" },
-          { label: "API", desc: "integration with CoinGecko" },
-        ].map((item, i) => (
-          <li key={i} className="flex items-start gap-2 text-sm">
-            <span className="text-blue-500 mt-0.5">✓</span>
-            <span><strong>{item.label}</strong> {item.desc}</span>
-          </li>
-        ))}
-      </ul>
-      <div className="flex gap-3">
-        <a href="#" className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-semibold transition">Live Demo</a>
-        <a href="#" className="px-5 py-2 border border-gray-600 hover:border-blue-500 text-white rounded-lg text-sm font-semibold transition">GitHub</a>
-      </div>
-    </div>
-    <div className="flex-1 bg-gray-800 rounded-xl p-4 flex items-center justify-center">
-      <div className="w-full bg-gray-900 rounded-lg overflow-hidden shadow-xl text-white text-xs">
-        <div className="bg-gray-800 px-4 py-2 font-bold flex items-center justify-between">
-          <span>📊 CryptoDash</span>
-          <span className="text-green-400 text-xs">● Live</span>
-        </div>
-        <div className="p-3">
-          <p className="text-gray-400 text-[10px] mb-2">Portfolio Overview</p>
-          <div className="grid grid-cols-3 gap-1 mb-3">
-            {[["BTC","$43,250","▲2.4%"],["ETH","$2,180","▲1.8%"],["BNB","$312","▼0.5%"]].map(([coin,price,change],i)=>(
-              <div key={i} className="bg-gray-800 rounded p-2">
-                <p className="text-[9px] text-gray-400">{coin}</p>
-                <p className="font-bold text-[11px]">{price}</p>
-                <p className={`text-[9px] ${change.includes('▲')?'text-green-400':'text-red-400'}`}>{change}</p>
-              </div>
-            ))}
-          </div>
-          <div className="bg-gray-800 rounded p-2 mb-2">
-            <p className="text-[9px] text-gray-400 mb-1">BTC/USD — 7 Days</p>
-            <div className="flex items-end gap-0.5 h-8">
-              {[60,45,70,55,80,65,90].map((h,i)=>(
-                <div key={i} className="flex-1 bg-blue-500 rounded-t opacity-80" style={{height:`${h}%`}}></div>
-              ))}
-            </div>
-          </div>
-          <div className="flex justify-between text-[9px] text-gray-400">
-            <span>Total Value: <span className="text-green-400 font-bold">$12,430</span></span>
-            <span>P&L: <span className="text-green-400">+$840</span></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</motion.div>
-
-{/* E-Commerce Card */}
-<motion.div
-  initial="hidden"
-  whileInView="show"
-  viewport={{ once: true }}
-  variants={fadeUp}
-  transition={{ duration: 0.6, delay: 0.3 }}
-  className="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-blue-500 transition-all mt-6"
->
-  <div className="flex flex-col md:flex-row gap-8">
-    <div className="flex-1">
-      <div className="flex items-center gap-3 mb-4">
-        <span className="text-3xl">🛒</span>
-        <h3 className="text-2xl font-bold">E-Commerce Platform</h3>
-      </div>
-      <p className="text-gray-400 mb-6">
-        Full-featured online store built with Next.js, Stripe payment, and Supabase database.
-      </p>
-      <ul className="space-y-2 mb-6">
-        {[
-          { label: "Payment", desc: "integration with Stripe" },
-          { label: "Cart", desc: "& wishlist with real-time sync" },
-          { label: "Admin", desc: "dashboard for product management" },
-          { label: "Auth", desc: "with Google & email login" },
-        ].map((item, i) => (
-          <li key={i} className="flex items-start gap-2 text-sm">
-            <span className="text-blue-500 mt-0.5">✓</span>
-            <span><strong>{item.label}</strong> {item.desc}</span>
-          </li>
-        ))}
-      </ul>
-      <div className="flex gap-3">
-        <a href="#" className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-semibold transition">Live Demo</a>
-        <a href="#" className="px-5 py-2 border border-gray-600 hover:border-blue-500 text-white rounded-lg text-sm font-semibold transition">GitHub</a>
-      </div>
-    </div>
-    <div className="flex-1 bg-gray-800 rounded-xl p-4 flex items-center justify-center">
-      <div className="w-full bg-white rounded-lg overflow-hidden shadow-xl text-gray-800 text-xs">
-        <div className="bg-blue-600 text-white px-4 py-2 font-bold flex items-center justify-between">
-          <span>🛒 ShopNext</span>
-          <span className="text-[10px]">Cart (3)</span>
-        </div>
-        <div className="p-3">
-          <div className="flex gap-1 mb-2">
-            {["All","Fashion","Electronics","Home"].map((cat,i)=>(
-              <span key={i} className={`px-2 py-0.5 rounded-full text-[9px] font-semibold ${i===0?'bg-blue-600 text-white':'bg-gray-100 text-gray-600'}`}>{cat}</span>
-            ))}
-          </div>
-          <div className="grid grid-cols-2 gap-2 mb-2">
-            {[
-              ["👟","Sneakers Pro","$89","4.8★"],
-              ["👜","Leather Bag","$125","4.9★"],
-              ["⌚","Smart Watch","$199","4.7★"],
-              ["🎧","Headphones","$79","4.6★"],
-            ].map(([emoji,name,price,rating],i)=>(
-              <div key={i} className="bg-gray-50 rounded p-2">
-                <div className="text-2xl text-center mb-1">{emoji}</div>
-                <p className="font-semibold text-[10px]">{name}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-blue-600 font-bold text-[10px]">{price}</span>
-                  <span className="text-[9px] text-yellow-500">{rating}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="bg-blue-600 text-white text-center rounded py-1 text-[10px] font-bold">
-            Checkout — $492
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</motion.div>
-
         </div>
       </section>
 
